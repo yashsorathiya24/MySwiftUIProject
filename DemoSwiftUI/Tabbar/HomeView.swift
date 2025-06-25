@@ -18,7 +18,6 @@ struct HomeView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Header
             HStack {
                 Image(systemName: "heart.fill")
                     .foregroundColor(.white)
@@ -36,7 +35,6 @@ struct HomeView: View {
             .padding()
             .background(Color.black)
             
-            // List with sections
             List {
                 Section(header: SectionHeader(title: "Wallpapers")) {
                     horizontalImageScrollView(wallpapers)
@@ -54,7 +52,7 @@ struct HomeView: View {
                 
                 Section(header: SectionHeader(title: "HD Wallpapers")) {
                     horizontalImageScrollView(hdWallpapers)
-                        .padding(.bottom, 80) // Leave space for bottom tab
+                        .padding(.bottom, 80) 
                 }
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets())
